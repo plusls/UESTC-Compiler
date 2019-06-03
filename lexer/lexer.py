@@ -93,7 +93,6 @@ def analysis(file_name, err_file):
                                                               idx, 'error character "{}"'.format(ch.decode())))
         buf = buf.decode()
         out_line += 1
-        out_file.write('{} {}\n'.format(buf.rjust(16, ' '), 10))
         if buf.isdigit():
             out_file.write('{} {}\n'.format(buf.rjust(16, ' '), 11))
             continue
@@ -101,7 +100,6 @@ def analysis(file_name, err_file):
         if t == None:
             out_file.write('{} {}\n'.format(buf.rjust(16, ' '), 10))
         else:
-            #out_file.write('{} {}\n'.format(''.rjust(16, ' '), t))
             out_file.write('{} {}\n'.format(buf.rjust(16, ' '), t))
     source_file.close()
     out_file.close()

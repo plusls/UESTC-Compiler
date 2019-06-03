@@ -15,7 +15,7 @@ class SymbolTable(object):
         return self.__symbol_type[s]
 
 
-symbol_list = ['begin', 'end', 'integer', 'if', 'then', 'else', 'function',
+symbol_list = [0, 'begin', 'end', 'integer', 'if', 'then', 'else', 'function',
                'read', 'write', 10, 11, '=', '<>', '<=', '<', '>=',
                '>', '-', '*', ':=', '(', ')', ';']
 type_table = SymbolTable(symbol_list)
